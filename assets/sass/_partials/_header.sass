@@ -1,0 +1,64 @@
+header
+  height: 100px
+
+  @media #{$xsmall-max}
+    height: 58px
+
+  .logo
+    @include animation(show-content-top 1s .5s ease forwards)
+    opacity: 0
+    float: left
+    margin: 40px 0 0 40px
+
+    @media #{$xsmall-max}
+      text-align: center
+      width: 100%
+      margin:
+        top: 15px
+
+    img
+      width: 120px
+
+  .menu
+    @include animation(show-content-top 1s .5s ease forwards)
+    opacity: 0
+    float: right
+
+    ul
+      li
+        text-transform: uppercase
+        display: inline-block
+        width: 105px
+        margin: 30px 20px 0 20px
+        text-align: center
+        vertical-align: middle
+
+        &.active,
+        &:hover
+          margin:
+            top: 45px
+
+          &::after
+            @include animation(fade-after-menu .3s ease forwards)
+            content: " "
+            display: block
+            height: 5px
+            margin: 10px auto 0 auto
+            background:
+              color: $color-primary-soft
+
+          &.double-line
+            margin:
+              top: 28px
+
+          a
+            color: $color-secondary
+
+
+@keyframes fade-after-menu
+  0%
+    opacity: 0
+    width: 0
+  100%
+    opacity: 1
+    width: 60px

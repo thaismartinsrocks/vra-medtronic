@@ -1,0 +1,129 @@
+.btn-soft-transparent
+  @include border-radius(0)
+  background:
+    color: transparent
+  border: 1px solid $color-soft
+  color: $color-soft
+  font:
+    family: $font-effra-light
+    size: 1em
+  padding: 10px 40px
+  margin: 10px 0
+
+  i
+    color: $color-soft
+
+  &:hover,
+  &:active,
+  &:active:hover,
+  &:active:focus,
+  &:focus,
+  &:visited
+    @include animation(btn-soft-transparent .5s ease forwards)
+
+@keyframes btn-soft-transparent
+  100%
+    background:
+      color: $color-soft
+    color: $color-secondary
+
+.btn-primary
+  @include border-radius(0)
+  background:
+    color: $color-primary
+  border: none
+  color: $color-soft
+  font:
+    family: $font-effra-light
+    size: 1em
+  padding: 10px 40px
+  margin: 10px 0
+
+  i
+    color: $color-soft
+
+  &:hover,
+  &:active,
+  &:active:hover,
+  &:active:focus,
+  &:focus,
+  &:visited
+    @include animation(btn-primary .5s ease forwards)
+
+@keyframes btn-primary
+  100%
+    background:
+      color: $color-primary-dark
+    color: $color-soft
+
+.btn-primary-transparent
+  @include border-radius(0)
+  background:
+    color: transparent
+  border: 1px solid $color-primary
+  color: $color-primary
+  font:
+    family: $font-effra-light
+    size: 1em
+  padding: 10px 40px
+  margin: 10px 0
+
+  i
+    color: $color-primary
+
+  &:hover,
+  &:active,
+  &:active:hover,
+  &:active:focus,
+  &:focus,
+  &:visited
+    @include animation(btn-primary-transparent .5s ease forwards)
+
+    i
+      @include animation(btn-primary-transparent-i .5s ease forwards)
+
+@keyframes btn-primary-transparent
+  100%
+    background:
+      color: $color-primary
+    color: $color-soft
+
+@keyframes btn-primary-transparent-i
+  100%
+    color: $color-soft
+
+.btn-secondary-transparent
+  @include border-radius(0)
+  background:
+    color: transparent
+  border: 1px solid $color-secondary
+  color: $color-secondary
+  font:
+    family: $font-effra-light
+    size: 1em
+  padding: 10px 40px
+  margin: 10px 0
+
+  i
+    color: $color-secondary
+
+  &:hover,
+  &:active,
+  &:active:hover,
+  &:active:focus,
+  &:focus,
+  &:visited
+    @include animation(btn-secondary-transparent .5s ease forwards)
+
+    i
+      @include animation(btn-secondary-transparent-i .5s ease forwards)
+
+@keyframes btn-secondary-transparent
+  100%
+    background:
+      color: $color-secondary
+    color: $color-soft
+
+@keyframes btn-secondary-transparent-i
+  100%
+    color: $color-soft

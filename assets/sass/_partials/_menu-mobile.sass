@@ -1,0 +1,67 @@
+#wrap
+  @include animation(fade-content 2s ease forwards)
+  z-index: 2
+  position: relative
+  -webkit-box-shadow: -10px 0 10px -8px rgba(0,0,0,0.15), -10px 0 10px -10px rgba(0,0,0,0.15)
+  -moz-box-shadow: -10px 0 10px -8px rgba(0,0,0,0.15), -10px 0 10px -10px rgba(0,0,0,0.15)
+  box-shadow: -10px 0 10px -8px rgba(0,0,0,0.15), -10px 0 10px -10px rgba(0,0,0,0.15)
+
+.menu-mobile
+  cursor: pointer
+  position: absolute
+  z-index: 2
+  margin:
+    top: 17px
+    left: 15px
+
+  ul
+    li
+      @include animation(show-content-top .5s ease forwards)
+      opacity: 0
+      width: 30px
+      height: 3px
+      background:
+        color: $color-secondary
+      margin:
+        bottom: 5px
+
+  &.active
+    ul
+      li
+        opacity: 1
+        &.first
+          @include animation(menu-mobile-first-line .8s ease forwards)
+        &.center
+          @include animation(menu-mobile-center-line .3s ease forwards)
+        &.last
+          @include animation(menu-mobile-last-line .5s ease forwards)
+
+#menu-mobile
+  position: absolute
+  height: 100%
+  width: 230px
+  left: -230px
+  font:
+    size: 1.1em
+
+  p
+    padding: 20px 30px
+    color: $color-soft
+    background:
+      color: $color-primary
+    font:
+      family: $font-effra-medium
+
+  ul
+    li
+      display: block
+      margin: 25px 0
+      padding: 0 30px
+      width: 100%
+      text-align: left
+
+      a
+        color: $color-primary
+
+        &:hover
+          color: $color-secondary

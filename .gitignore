@@ -1,5 +1,6 @@
 .idea
-vendor/
+vendor
 logs/*
 !/logs/README.md
 composer.lock
+assets/.sass-cache

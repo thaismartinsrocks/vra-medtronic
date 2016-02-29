@@ -1,0 +1,1378 @@
+/*------- RESPONSIVE -------
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+html
+  height: 100%
+
+body
+  height: 100%
+  padding-top: 45px
+  font-family: 'Open Sans', sans-serif
+  background-image: url("../images/admin/dotted.png")
+  overflow-x: hidden
+
+h2
+  text-shadow: 1px 1px 1px #FFFFFF
+
+a
+  color: #26AEF2
+  &:focus
+    outline: none
+
+form
+  margin: 0
+
+input
+  &.focused
+    border-color: rgba(82, 168, 236, 0.8)
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(82, 168, 236, 0.6)
+    outline: 0 none
+    position: relative
+    z-index: 2
+  &.error
+    border-color: rgba(226, 119, 90, 0.6)
+    outline: 0 none
+    position: relative
+    z-index: 2
+    &:focus
+      border-color: rgba(226, 119, 90, 0.6)
+      outline: 0 none
+      position: relative
+      z-index: 2
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(226, 119, 90, 0.6)
+  &.warning
+    border-color: rgba(244, 183, 112, 0.6)
+    outline: 0 none
+    position: relative
+    z-index: 2
+    &:focus
+      border-color: rgba(244, 183, 112, 0.6)
+      outline: 0 none
+      position: relative
+      z-index: 2
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(244, 183, 112, 0.6)
+  &.success
+    border-color: rgba(97, 204, 40, 0.6)
+    outline: 0 none
+    position: relative
+    z-index: 2
+    &:focus
+      border-color: rgba(97, 204, 40, 0.6)
+      outline: 0 none
+      position: relative
+      z-index: 2
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(97, 204, 40, 0.6)
+  &.knob
+    display: none
+
+.pad15
+  padding: 15px
+
+.form-actions
+  margin-bottom: 0
+
+.breadcrumb
+  background: none repeat scroll 0 0 transparent
+  margin: 0
+  padding: 8px 0
+  > li
+    text-shadow: none
+
+.heading
+  border-bottom: 1px solid #EBEBEB
+  margin: 0
+  padding: 0 0 15px
+  font-weight: normal
+  > a.btn
+    font-weight: normal
+    margin: 5px 0 0
+
+.box
+  background-color: #FFFFFF
+  border: 1px solid #DDDDDD
+  -moz-border-radius: 3px 3px 3px 3px
+  -webkit-border-radius: 3px 3px 3px 3px
+  border-radius: 3px 3px 3px 3px
+
+.container-narrow
+  width: 95%
+  max-width: 360px
+  margin: 5% auto
+
+.divider
+  hr
+    margin: 18px 0
+    width: 40%
+  color: #656564
+  font-size: 18px
+  line-height: 30px
+  text-align: center
+  margin: 10px 0 15px
+
+.avatar-20
+  width: 20px
+  height: 20px
+
+.avatar-50
+  width: 50px
+  height: 50px
+
+.inlinesparkline
+  color: #FFFFFF
+
+/* bootstrap-time-picker fix
+
+.bootstrap-timepicker table td input
+  padding: 2px
+  font-size: 11px
+
+/* fix for box-sizing
+
+select, textarea
+  height: 30px
+
+input
+  &[type="text"], &[type="password"], &[type="datetime"], &[type="datetime-local"], &[type="date"], &[type="month"], &[type="time"], &[type="week"], &[type="number"], &[type="email"], &[type="url"], &[type="search"], &[type="tel"], &[type="color"]
+    height: 30px
+
+.uneditable-input
+  height: 30px
+
+.input-append .add-on, .input-prepend .add-on
+  height: 30px
+  width: 30px
+
+select, textarea
+  border-radius: 1px
+
+input
+  &[type="text"], &[type="password"], &[type="datetime"], &[type="datetime-local"], &[type="date"], &[type="month"], &[type="time"], &[type="week"], &[type="number"], &[type="email"], &[type="url"], &[type="search"], &[type="tel"], &[type="color"]
+    border-radius: 1px
+
+.uneditable-input
+  border-radius: 1px
+
+.input-append .add-on, .input-prepend .add-on
+  width: 30px
+  height: 30px
+
+/*buttons
+
+.navbar .btn.btn-navbar
+  background: #E28271
+  margin: 7px 5px 7px 0
+
+.btn-circle
+  border-radius: 50px
+  width: 20px
+  height: 20px
+  padding: 0
+
+/*  gallery
+
+.gallery-item
+  display: inline-block
+  margin-bottom: 6px
+  vertical-align: top
+
+/*  top menu notifications/messages
+
+.top-menu
+  .popover
+    &.bottom .arrow:after
+      border-bottom-color: #F7F7F7
+    width: 300px
+  .popover-content
+    padding: 0
+    ul
+      width: 100%
+    li
+      &:hover
+        background-color: #fafafa
+      display: block
+      border-bottom: 1px solid #DDD
+      line-height: 18px
+      width: 100%
+      &:last-child
+        border-bottom: none
+      a
+        padding: 7px 5px 7px 45px
+        font-size: 11px
+        display: block
+        color: #333
+        line-height: 15px
+        text-decoration: none
+        h4
+          display: block
+          font-size: 12px
+          font-weight: bold
+          margin: 0
+        span
+          display: block
+          font-size: 10px
+          color: #A8A8A8
+          float: right
+        img
+          height: 35px
+          left: 5px
+          position: absolute
+          width: 35px
+    .popover_footer a
+      background: none repeat scroll 0 0 #F7F7F7
+      border-top: 1px solid #EBEBEB
+      color: #444444
+      display: block
+      font-size: 12px
+      padding: 3px 0
+      text-align: center
+      text-decoration: none
+      &:hover
+        background: none repeat scroll 0 0 #EDEDED
+  li a
+    &[data-notification="0"]:after
+      display: none
+    &[data-notification]:after
+      background-image: linear-gradient(bottom, rgb(199, 24, 33) 0%, rgb(245, 71, 71) 100%)
+      background-image: -o-linear-gradient(bottom, rgb(199, 24, 33) 0%, rgb(245, 71, 71) 100%)
+      background-image: -moz-linear-gradient(bottom, rgb(199, 24, 33) 0%, rgb(245, 71, 71) 100%)
+      background-image: -webkit-linear-gradient(bottom, rgb(199, 24, 33) 0%, rgb(245, 71, 71) 100%)
+      background-image: -ms-linear-gradient(bottom, rgb(199, 24, 33) 0%, rgb(245, 71, 71) 100%)
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(199, 24, 33)), color-stop(1, rgb(245, 71, 71)))
+      border: 1px solid #751616
+      border-radius: 4px 4px 4px 4px
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 1px 1px rgba(0, 0, 0, 0.2)
+      color: #FFFFFF
+      content: attr(data-notification)
+      font-size: 11px
+      font-weight: bold
+      min-width: 10px
+      padding: 2px 3px
+      position: absolute
+      right: 1px
+      text-align: center
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15)
+      top: 2px
+      line-height: 13px
+
+/* hide bubble if the data attribute value is 0
+
+/*  dataTables - Dynamic table
+
+table.table thead
+  .sorting, .sorting_asc, .sorting_desc, .sorting_asc_disabled, .sorting_desc_disabled
+    cursor: pointer
+    *cursor: hand
+  .sorting
+    background: url('../images/admin/sort_both.png') no-repeat center right
+  .sorting_asc
+    background: url('../images/admin/sort_asc.png') no-repeat center right
+  .sorting_desc
+    background: url('../images/admin/sort_desc.png') no-repeat center right
+  .sorting_asc_disabled
+    background: url('../images/admin/sort_asc_disabled.png') no-repeat center right
+  .sorting_desc_disabled
+    background: url('../images/admin/sort_desc_disabled.png') no-repeat center right
+
+.dataTables_filter
+  text-align: right
+
+/*  gritter notifications
+
+#gritter-notice-wrapper
+  position: fixed
+  top: 55px
+  right: 20px
+  width: 301px
+  z-index: 9999
+  &.top-left
+    left: 20px
+    right: auto
+  &.bottom-right
+    top: auto
+    left: auto
+    bottom: 20px
+    right: 20px
+  &.bottom-left
+    top: auto
+    right: auto
+    bottom: 20px
+    left: 20px
+
+.gritter-item-wrapper
+  position: relative
+  margin: 0 0 10px 0
+
+.gritter-top, .gritter-bottom
+  display: none
+
+.gritter-item
+  display: block
+  /*background:url('assets/images/admin/gritter.png') no-repeat left -40px;
+  background: #292A2F
+  color: #fff
+  padding: 8px 11px
+  font-size: 11px
+
+.hover .gritter-item
+  background-position: right -40px
+
+.gritter-item
+  p
+    padding: 0
+    margin: 0
+    word-wrap: break-word
+  a
+    color: #26AEF2 !important
+
+.gritter-close
+  cursor: pointer
+  display: block !important
+  height: 30px
+  position: absolute
+  right: 3px
+  text-align: right
+  top: 0
+  width: 30px
+  &:before
+    content: "\f00d"
+    font-size: 20px
+  &:hover:before
+    color: #eee
+
+.gritter-title
+  font-size: 14px
+  font-weight: bold
+  padding: 0 0 7px 0
+  display: block
+  text-shadow: 1px 1px 0 #000
+/* Not supported by IE :(
+
+.gritter-image
+  width: 48px
+  height: 48px
+  float: left
+
+.gritter-with-image, .gritter-without-image
+  padding: 0
+
+.gritter-with-image
+  width: 220px
+  float: right
+
+/* for the light (white) version of the gritter notice
+
+.gritter-light
+  .gritter-item, .gritter-bottom, .gritter-top
+    background: #F4F4F4
+    color: #333
+    border: 1px solid #D8D8D8
+  .gritter-close
+    &:before
+      color: #222
+    &:hover:before
+      color: #666
+  .gritter-title
+    text-shadow: none
+
+/* user side
+
+.user_side
+  padding: 15px 15px
+  margin: 0
+  background-color: #3D3E43
+
+  img
+    float: left
+    width: 50px
+    height: 50px
+    -moz-border-radius: 150px
+    -webkit-border-radius: 150px
+    border-radius: 150px
+    margin: 0 15px 0 0
+    background-color: #666
+
+  h5
+    color: #E28271
+    line-height: 16px
+    margin: 8px 0 0
+  p
+    color: #FFFFFF
+    font-size: 11px
+
+/* dashboard
+
+.overview_boxes
+  text-align: center
+  margin-top: 15px
+  min-height: 208px
+  .box_row
+    display: none
+    > div
+      float: left
+      margin: 0 30px 15px 0
+      text-align: center
+    &:last-child > div:last-child
+      margin-right: 0
+  .userstats.clearfix
+    margin: 0
+
+.box_row
+  display: inline-block
+
+.overview_boxes
+  h2
+    color: #333
+    font-size: 26px
+    line-height: 30px
+    margin: 5px 0 0
+  p
+    color: #888
+    font-size: 14px
+    margin: 0
+  .widget-tasks-statistics
+    margin-left: 15px
+
+.circle
+  i
+    color: #333333
+    display: block
+    font-size: 60px
+    height: 120px
+    line-height: 120px
+    width: 120px
+  background-color: #FFFFFF
+  border-radius: 120px
+  display: inline-block
+  border: 1px solid #ccc
+
+/*  Navbar
+
+.navbar-fixed-top .navbar-inner
+  height: 45px
+  background: #292A2F
+  border: none
+  box-shadow: none
+  padding-right: 30px
+
+.navbar-static-top .navbar-inner
+  box-shadow: none
+  padding-right: 30px
+
+.logo
+  float: left
+  padding: 9px 0 0
+
+.container-fluid
+  padding: 0
+
+#wrap
+  height: auto !important
+  min-height: 100%
+
+.main_container
+  padding: 0 25px 25px
+  position: relative
+  > .row-fluid
+    margin-bottom: 25px
+
+/* ----------- top menu -----------
+
+.top-menu
+  ul
+    list-style: none
+    margin: 0
+  > ul > li
+    float: left
+    > a
+      color: #fff
+      display: block
+      font-size: 16px
+      line-height: 20px
+      padding: 10px 15px
+      text-decoration: none
+      position: relative
+
+/* ----------- Side menu -----------
+
+.b_F79999
+  &:hover, &.active
+    border-left: 2px solid #F79999
+
+.b_C3F7A7
+  &:hover, &.active
+    border-left: 2px solid #C3F7A7
+
+.b_9FDDF6
+  &:hover, &.active
+    border-left: 2px solid #9FDDF6
+
+.b_F6F1A2
+  &:hover, &.active
+    border-left: 2px solid #F6F1A2
+
+.b_C1F8A9
+  &:hover, &.active
+    border-left: 2px solid #C1F8A9
+
+.b_9FDDF6
+  &:hover, &.active
+    border-left: 2px solid #9FDDF6
+
+.b_F5C294
+  &:hover, &.active
+    border-left: 2px solid #F5C294
+
+.accordion-heading
+  background: #292A2F
+  a
+    border-left: 2px solid #292A2F
+    border-bottom: 1px dashed #313131
+
+.accordion-group
+  a
+    display: block
+    padding: 8px 15px
+    color: #FFFFFF
+    text-decoration: none
+    position: relative
+  border: none
+  border-radius: 0
+
+.accordion-inner
+  background-color: #3D3E43
+  border: none
+  padding: 9px 0
+  a
+    border-left: 2px solid #3D3E43
+    &:hover, &.active
+      border-left: 2px solid #76777C
+
+.sidebar-nav .accordion-toggle
+  &.collapsed[data-toggle]:before, &[data-toggle]:before
+    position: absolute
+    right: 15px
+    top: 10px
+  &.collapsed[data-toggle]:before
+    content: "\f054"
+  &[data-toggle]:before
+    content: "\f078"
+
+/* ----------- Tasks page -----------
+
+.widget-tasks-progress
+  padding: 25px
+  text-align: center
+  .circle
+    margin: 0 5px
+    display: inline-block
+  .userstats
+    position: relative
+    display: inline-block
+    text-align: center
+    div
+      display: inline-block
+    img
+      position: absolute
+      z-index: 0
+      width: 60px
+      left: 20px
+      top: 20px
+      border-radius: 60px
+
+.widget-tasks-assigned
+  ul
+    list-style: none
+    padding: 0
+    margin: 0
+    > li
+      background: none repeat scroll 0 0 #FFFFFF
+      border-bottom: 1px solid #DDDDDD
+      color: #9D9D9D
+      display: block
+      font-size: 11px
+      height: 80px
+      margin: 0
+      overflow: hidden
+      position: relative
+  .content
+    color: #62687E
+    float: left
+    font-size: 13px
+    padding-top: 5px
+    padding-left: 10px
+    padding-right: 10px
+    width: 70%
+    h5
+      font-size: 15px
+      color: #62687E
+      margin: 0
+    span
+      font-size: 11px
+  .rightboxes
+    position: relative
+    right: 0
+    float: right
+    width: 30%
+    li
+      border-left: 1px solid #DDDDDD
+      float: left
+      font-size: 18px
+      padding: 15px 10px
+      text-align: center
+      width: 50%
+      span
+        color: #CCCCCC
+        display: block
+        font-size: 14px
+        margin-top: 5px
+  .info
+    background: none repeat scroll 0 0 white
+    bottom: 10px
+    left: 10px
+    position: absolute
+    .date
+      color: #9D9D9D
+      font-size: 10px
+      float: right
+      margin-right: 10px
+    img
+      float: left
+  .progress
+    border-radius: 0
+    bottom: 0
+    display: block
+    height: 5px
+    margin: 0
+    position: absolute
+    width: 100%
+
+.widget-tasks-statistics
+  text-align: center
+  .userstats
+    position: relative
+    display: inline-block
+    margin: 0 30px 10px
+    .image
+      border-radius: 60px 60px 60px 60px
+      left: 15px
+      position: absolute
+      top: 15px
+      width: 45px
+      opacity: 1
+      padding: 0
+    .white
+      background: none repeat scroll 0 0 white
+      border-radius: 60px 60px 60px 60px
+      font-size: 40px
+      left: 15px
+      opacity: 1
+      padding: 15px
+      position: absolute
+      top: 15px
+      z-index: -1
+      width: 90px
+      height: 90px
+      border: 1px solid #DDDDDD
+    a:hover
+      text-decoration: none
+    .white p
+      font-size: 14px
+      color: #555555
+    p strong
+      display: block
+      font-size: 16px
+
+/* ----------- Widget -----------
+
+.widget-top
+  text-align: center
+  .circle
+    display: inline-block
+    margin: 0 10px
+
+.widget
+  /*margin-bottom: 15px;
+  -moz-border-radius: 3px 3px 3px 3px
+  -webkit-border-radius: 3px 3px 3px 3px
+  border-radius: 3px 3px 3px 3px
+  overflow: hidden
+
+.widget-padding .widget-body
+  padding: 15px
+
+.widget-footer
+  background-color: #efefef
+  -moz-border-radius: 0 0 3px 3px
+  -webkit-border-radius: 0 0 3px 3px
+  border-radius: 0 0 3px 3px
+  padding: 10px
+  border-color: #CCCCCC
+  border-style: solid
+  border-width: 0 1px 1px
+  &:after
+    clear: both
+    content: ""
+    display: table
+    line-height: 0
+  &:before
+    content: ""
+    display: table
+    line-height: 0
+
+.widget-header
+  background-color: #efefef
+  -moz-border-radius: 3px 3px 0 0
+  -webkit-border-radius: 3px 3px 0 0
+  border-radius: 3px 3px 0 0
+  min-height: 51px
+  border: 1px solid #DDDDDD
+  > i, h5
+    float: left
+    color: #62687e
+    font-weight: 200
+  > i
+    font-size: 16px
+    padding: 15px 10px 15px 11px
+    text-align: center
+    width: 40px
+  a
+    color: #777777
+    cursor: pointer
+    font-size: 16px
+    margin: 0 0 0 8px
+    text-decoration: none
+    &:hover
+      color: #333
+    &.widget-hidden i
+      -moz-transform: rotate(180deg)
+      -webkit-transform: rotate(180deg)
+      -o-transform: rotate(180deg)
+      -ms-transform: rotate(180deg)
+      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2)
+  h5
+    margin: 0
+    padding: 15px 0 0
+    font-size: 16px
+  .btn-group
+    float: right
+    margin: 7px
+  .btn-plus
+    margin: 10px
+    color: #fff
+    font-size: 13px
+    text-transform: uppercase
+    &:hover
+      color: #fff
+    i
+      margin-right: 5px
+
+.widget-header-under
+  background: none repeat scroll 0 0 #FCFCFC
+  border-color: #DDDDDD
+  border-style: solid
+  border-width: 0 1px 1px
+  clear: both
+  font-size: 11px
+  text-align: center
+  padding: 4px
+
+.widget-buttons
+  float: right
+  padding: 15px 15px 0 0
+  button
+    margin-top: -5px
+
+.widget-body
+  padding: 15px
+  border-style: solid
+  border-width: 0 1px 1px
+  border-color: #ccc
+  background-color: #fff
+  .table
+    strong
+      color: #E28271
+    margin-bottom: 0
+
+.widget-header
+  &:before
+    content: ""
+    display: table
+    line-height: 0
+  &:after
+    content: ""
+    display: table
+    line-height: 0
+    clear: both
+
+/* -------------------------------
+/* ----------- widgets -----------
+/* -------------------------------
+
+/*----------- items -----------
+
+.comment-bubble
+  background: none repeat scroll 0 0 #F3F6F7
+  border: 1px solid #D5D8DF
+  border-radius: 3px 3px 3px 3px
+  display: block
+  margin: 15px 10px 20px 70px
+  padding: 5px
+  position: relative
+
+.the-icons
+  list-style: none
+  i
+    font-size: 20px
+
+.btn
+  &.btn-box
+    padding: 20px
+    border-radius: 0
+    color: #555555
+    position: relative
+    /*margin-bottom: 15px;
+    span
+      display: block
+  &.btn-small.btn-box
+    padding: 10px 0
+  border-radius: 2px
+  background-image: none !important
+  &.btn-primary
+    background-color: #2D9AF9
+    background-image: none
+
+/* custom bootstrap design
+
+.btn-primary
+  &:hover, &:active, &.active, &.disabled, &[disabled]
+    background-color: #3074FC
+
+.btn-info
+  background-color: #42C1F7
+  &:hover, &:active, &.active, &.disabled, &[disabled]
+    background-color: #4FB6D4
+
+.btn-success
+  background-color: #7BD77B
+  &:hover, &:active, &.active, &.disabled, &[disabled]
+    background-color: #71C371
+
+.bubble[data-bubble]:after
+  content: attr(data-bubble)
+  position: absolute
+  top: -5px
+  right: -5px
+  font-size: 11px
+  padding: 2px 4px
+  text-align: center
+  font-weight: bold
+  color: #fff
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15)
+  min-width: 15px
+  border-radius: 30px
+
+.bubble-danger:after
+  background: #ff7c7c
+  /* Old browsers
+  background: -moz-linear-gradient(top, #ff7c7c 0%, #ef3737 100%)
+  /* FF3.6+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff7c7c), color-stop(100%, #ef3737))
+  /* Chrome,Safari4+
+  background: -webkit-linear-gradient(top, #ff7c7c 0%, #ef3737 100%)
+  /* Chrome10+,Safari5.1+
+  background: -o-linear-gradient(top, #ff7c7c 0%, #ef3737 100%)
+  /* Opera 11.10+
+  background: -ms-linear-gradient(top, #ff7c7c 0%, #ef3737 100%)
+  /* IE10+
+  background: linear-gradient(to bottom, #ff7c7c 0%, #ef3737 100%)
+  /* W3C
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7c7c', endColorstr='#ef3737',GradientType=0 )
+  /* IE6-9
+  border: 1px solid #BF3333
+
+.bubble-info:after
+  background: #7ec2dd
+  /* Old browsers
+  background: -moz-linear-gradient(top, #7ec2dd 0%, #34a9c9 100%)
+  /* FF3.6+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7ec2dd), color-stop(100%, #34a9c9))
+  /* Chrome,Safari4+
+  background: -webkit-linear-gradient(top, #7ec2dd 0%, #34a9c9 100%)
+  /* Chrome10+,Safari5.1+
+  background: -o-linear-gradient(top, #7ec2dd 0%, #34a9c9 100%)
+  /* Opera 11.10+
+  background: -ms-linear-gradient(top, #7ec2dd 0%, #34a9c9 100%)
+  /* IE10+
+  background: linear-gradient(to bottom, #7ec2dd 0%, #34a9c9 100%)
+  /* W3C
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ec2dd', endColorstr='#34a9c9',GradientType=0 )
+  /* IE6-9
+  border: 1px solid #2F7C91
+
+.bubble-warning:after
+  background: #e5d849
+  /* Old browsers
+  background: -moz-linear-gradient(top, #e5d849 0%, #c4b623 100%)
+  /* FF3.6+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e5d849), color-stop(100%, #c4b623))
+  /* Chrome,Safari4+
+  background: -webkit-linear-gradient(top, #e5d849 0%, #c4b623 100%)
+  /* Chrome10+,Safari5.1+
+  background: -o-linear-gradient(top, #e5d849 0%, #c4b623 100%)
+  /* Opera 11.10+
+  background: -ms-linear-gradient(top, #e5d849 0%, #c4b623 100%)
+  /* IE10+
+  background: linear-gradient(to bottom, #e5d849 0%, #c4b623 100%)
+  /* W3C
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5d849', endColorstr='#c4b623',GradientType=0 )
+  /* IE6-9
+  border: 1px solid #9B8F20
+
+.bubble-success:after
+  background: #94e569
+  /* Old browsers
+  background: -moz-linear-gradient(top, #94e569 0%, #62a53e 100%)
+  /* FF3.6+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #94e569), color-stop(100%, #62a53e))
+  /* Chrome,Safari4+
+  background: -webkit-linear-gradient(top, #94e569 0%, #62a53e 100%)
+  /* Chrome10+,Safari5.1+
+  background: -o-linear-gradient(top, #94e569 0%, #62a53e 100%)
+  /* Opera 11.10+
+  background: -ms-linear-gradient(top, #94e569 0%, #62a53e 100%)
+  /* IE10+
+  background: linear-gradient(to bottom, #94e569 0%, #62a53e 100%)
+  /* W3C
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#94e569', endColorstr='#62a53e',GradientType=0 )
+  /* IE6-9
+  border: 1px solid #7ABC56
+
+.priority-high
+  border-right: 4px solid #F79999
+
+.priority-medium
+  border-right: 4px solid #F5C294
+
+.priority-low
+  border-right: 4px solid #C3F7A7
+
+.priority-high-left
+  border-left: 4px solid #F79999
+
+.priority-medium-left
+  border-left: 4px solid #F5C294
+
+.priority-low-left
+  border-left: 4px solid #C3F7A7
+
+/* ----------- analytics -----------
+
+.widget-analytics-large
+  width: 100%
+  height: 100%
+  margin: 8px auto
+
+.widget-analytics-small
+  ul
+    list-style: none
+    float: left
+    margin: 0
+    width: 100%
+    li
+      clear: both
+      margin: 10px 5px
+  span
+    margin: 0 7px 0 0
+
+  a,
+  h4
+    margin: 0 10px 0 0
+    float: right
+    display: inline
+    color: #E28271
+  h5
+    font-size: 12px
+    margin: 0
+    display: inline
+
+/* ----------- calendar -----------
+
+#calendar
+  width: 100%
+  margin: 0 auto
+
+.fc-header-left
+  position: absolute
+  left: 80px
+  top: 0
+
+.fc-header-right
+  position: absolute
+  right: 80px
+  top: 0
+
+.fc-header-center
+  left: 50%
+  margin-left: -100px
+  position: absolute
+  text-align: center
+  top: 0
+  width: 200px
+
+.fc-header-title h2
+  font-size: 20px
+  color: #3D3D3D
+  text-shadow: 1px 1px 1px white
+  margin: 5px 0
+
+.fc-header .fc-button
+  margin-right: -1px
+  border: medium none
+
+.fc-state-default
+  background: transparent
+  border: 0
+  color: #555
+  .fc-button-inner
+    background: transparent
+    border: 0
+    color: #555
+
+.fc-state-active
+  background: transparent
+  border: none
+  color: #333
+  font-weight: bold
+  .fc-button-inner
+    background: transparent
+    border: none
+    color: #333
+    font-weight: bold
+
+.fc-button-content
+  float: left
+  font-size: 16px
+  height: auto
+  line-height: 51px
+  padding: 0 10px
+  position: relative
+  white-space: nowrap
+
+.fc-event-skin
+  background-color: #67A0E5
+  border-color: #447EC4
+  color: #FFFFFF
+
+/* ----------- Progress bars -----------
+
+.progress .bar
+  background-color: #9AD4EC
+  background-image: none
+  box-shadow: none
+
+.progress-striped .bar
+  background-color: #9AD4EC
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.25)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.25)), color-stop(0.75, rgba(255, 255, 255, 0.25)), color-stop(0.75, transparent), to(transparent))
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent)
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent)
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent)
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent)
+  -webkit-background-size: 40px 40px
+  -moz-background-size: 40px 40px
+  -o-background-size: 40px 40px
+  background-size: 40px 40px
+
+.progress-danger.progress-striped .bar, .progress-striped .bar-danger
+  background-color: #F98886
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.25)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.25)), color-stop(0.75, rgba(255, 255, 255, 0.25)), color-stop(0.75, transparent), to(transparent))
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent)
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent)
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent)
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent)
+
+.progress-success.progress-striped .bar, .progress-striped .bar-success
+  background-color: #9DD68B
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.25)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.25)), color-stop(0.75, rgba(255, 255, 255, 0.25)), color-stop(0.75, transparent), to(transparent))
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent)
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent)
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent)
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent)
+
+.progress-warning.progress-striped .bar, .progress-striped .bar-warning
+  background-color: #F7C15D
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.25)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.25)), color-stop(0.75, rgba(255, 255, 255, 0.25)), color-stop(0.75, transparent), to(transparent))
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent)
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent)
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent)
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent)
+
+.progress-info.progress-striped .bar, .progress-striped .bar-info
+  background-color: #9AD4EC
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.25)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.25)), color-stop(0.75, rgba(255, 255, 255, 0.25)), color-stop(0.75, transparent), to(transparent))
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent)
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent)
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent)
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent)
+
+.progress-success .bar, .progress .bar-success
+  background-color: #9DD68B
+
+.progress-warning .bar, .progress .bar-warning
+  background-color: #F7C15D
+
+.progress-danger .bar, .progress .bar-danger
+  background-color: #F98886
+
+/* ----------- comments -----------
+
+.widget-comments
+  .avatar
+    left: 0
+    margin: 10px
+    position: absolute
+    top: 0
+    width: 50px
+    height: 50px
+  ul
+    list-style: none
+    margin: 0
+    li
+      position: relative
+  .comment-bubble
+    font-size: 12px
+    h4
+      color: #62687E
+      font-size: 14px
+      margin: 0
+      strong
+        color: #e28271
+    .settings
+      position: relative
+      text-align: right
+      a
+        font-size: 10px
+        margin-left: 5px
+
+.comment-bubble .date
+  color: #555555
+  font-size: 10px
+  position: absolute
+  right: 10px
+  top: 5px
+
+/* ----------- tickets -----------
+
+.widget-tickets
+  ul
+    margin: 0
+    li
+      &:last-child
+        border-bottom: none
+      border-bottom: 1px solid #DDDDDD
+      color: #9D9D9D
+      display: block
+      font-size: 11px
+      height: 50px
+      margin: 0
+      overflow: hidden
+      position: relative
+      a
+        display: block
+        text-decoration: none
+        color: #9D9D9D
+      &:hover
+        background: #fafafa
+  .avatar
+    float: left
+    margin-right: 10px
+    border-right: 1px solid #DDDDDD
+    width: 50px
+    height: 50px
+  h4
+    font-size: 15px
+    color: #62687E
+  h5
+    padding-top: 5px
+    font-size: 13px
+    margin: 0
+    color: #62687E
+  p
+    overflow: hidden
+  .date
+    color: #9D9D9D
+    font-size: 10px
+    position: absolute
+    right: 10px
+    top: 5px
+  .settings
+    position: relative
+    text-align: right
+    a
+      font-size: 10px
+      margin-left: 5px
+      display: inline
+      color: #26AEF2
+  &.widget-tickets-large
+    ul li
+      padding: 15px
+      height: auto
+    .username
+      font-size: 10px
+      position: relative
+      text-align: right
+
+/* ----------- user interface -----------
+
+.widget-user-interface .form-horizontal
+  .control-label
+    padding: 0
+    width: 110px
+  .controls
+    margin-left: 130px
+
+/* responsive css
+/* Landscape phones and down
+@media (max-width: 480px)
+  body
+    padding: 0 !important
+  .top-menu
+    ul
+      margin: 0 15px 0 0 !important
+    li a
+      padding: 10px 5px !important
+  label
+    width: 100%
+    input
+      width: 100%
+    select
+      text-align: left
+      width: 100%
+  .label
+    font-size: 9px !important
+  .widget-padding .widget-body
+    padding: 5px !important
+  .table
+    font-size: 12px
+    tr > td
+      padding: 5px 1px
+      vertical-align: middle
+    .btn
+      padding: 2px 7px
+  .nav-collapse.collapse
+    position: static !important
+    width: auto !important
+  .navbar-fixed-top
+    margin: 0 !important
+    .navbar-inner
+      padding: 0 !important
+  .navbar-fixed-bottom .navbar-inner
+    padding: 0 !important
+  .overview_boxes .box_row
+    > div
+      float: none !important
+    &:last-child > div:last-child
+      margin-right: 25px
+  .heading .btn
+    font-size: 12px !important
+    padding: 2px 8px
+
+/* Landscape phone to portrait tablet
+@media (max-width: 767px)
+  body
+    padding: 0 !important
+  .nav-collapse.collapse
+    position: static !important
+    width: auto !important
+  .navbar-fixed-top
+    margin: 0 !important
+    .navbar-inner
+      padding: 0 !important
+  .navbar-fixed-bottom .navbar-inner
+    padding: 0 !important
+  label
+    text-align: left
+    width: 100%
+    input, select
+      text-align: left
+      width: 100%
+  .widget-padding .widget-body
+    padding: 5px !important
+  .accordion-group
+    margin: 0
+  .user_side
+    padding: 15px 5px
+  .main_container
+    margin-left: 0px !important
+    left: 0 !important
+  .logo
+    margin: 0 0 0 15px
+    max-width: 150px
+  .overview_boxes .box_row:last-child > div:last-child
+    margin-right: 25px
+
+/* Portrait tablet to landscape and desktop
+@media (min-width: 768px) and (max-width: 979px)
+  .sidebar
+    width: 100% !important
+  .navbar-fixed-top
+    margin: 0 !important
+    position: fixed !important
+    .navbar-inner
+      padding: 0 !important
+  .navbar-fixed-bottom .navbar-inner
+    padding: 0 !important
+  .nav-collapse.collapse
+    position: fixed
+    width: 150px
+    height: 100% !important
+    background: #292A2F
+    left: -150px
+  .main_container
+    margin-left: 0
+  .accordion-heading .accordion-toggle
+    display: block
+    padding: 8px 10px
+  .user_side
+    padding: 15px 5px
+  .logo
+    margin: 0 0 0 15px
+    max-width: 150px
+  .overview_boxes .box_row:last-child > div:last-child
+    margin-right: 25px
+
+@media (min-width: 980px) and (max-width: 1200px)
+  .nav-collapse.collapse
+    position: fixed
+    width: 170px
+    height: 100% !important
+    background: #292A2F
+    left: 0 !important
+  .main_container
+    margin-left: 170px !important
+    left: 0 !important
+  .logo
+    margin: 0 90px 0 15px
+    max-width: 150px
+  .overview_boxes .box_row:last-child > div:last-child
+    margin-right: 25px
+
+/* Large desktop
+@media (min-width: 1200px)
+  .nav-collapse.collapse
+    position: fixed
+    width: 200px
+    height: 100% !important
+    background: #292A2F
+    left: 0 !important
+  .main_container
+    margin-left: 200px !important
+    left: 0 !important
+  .logo
+    margin: 0 90px 0 15px
+    max-width: 150px
+  .overview_boxes .box_row:last-child > div:last-child
+    margin-right: 25px

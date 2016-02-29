@@ -1,18 +1,9 @@
 {
-    "name": "vra-medtronic",
-    "description": "MedTronic's Brazillian Website",
-    "keywords": ["medtronic"],
-    "authors": [
-        {
-            "name": "Thais Martins",
-            "email": "contato@thaismartins.co",
-            "homepage": "http://www.thaismartins.co/"
-        }
-    ],
     "require": {
-        "php": ">=5.5.0",
-        "slim/slim": "^3.1",
-        "slim/php-view": "^2.0",
-        "monolog/monolog": "^1.17"
+        "mikecao/flight": "^1.2",
+        "j4mie/idiorm": "1.5.*",
+        "j4mie/paris": "1.5.*",
+        "twbs/bootstrap": "^3.3",
+        "fortawesome/font-awesome": "*"
     }
 }

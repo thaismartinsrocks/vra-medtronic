@@ -380,4 +380,25 @@ footer .newsletter form button i { font-size: 2em; font-weight: 900; }
 /* line 44, ../sass/_partials/_medtronic.sass */
 #medtronic .references p strong { color: #005d9a; }
 
+/* line 2, ../sass/_partials/_doctors.sass */
+#doctors strong { font-family: "efframedium"; color: #0092d2; }
+/* line 7, ../sass/_partials/_doctors.sass */
+#doctors .principal { height: 320px; width: 100%; overflow: hidden; background-color: #005d9a; }
+/* line 14, ../sass/_partials/_doctors.sass */
+#doctors .principal .image { padding: 0; }
+/* line 17, ../sass/_partials/_doctors.sass */
+#doctors .principal .image img { width: 100%; min-height: 100%; }
+/* line 22, ../sass/_partials/_doctors.sass */
+#doctors .content h1 { text-align: center; margin: 40px 0; }
+/* line 26, ../sass/_partials/_doctors.sass */
+#doctors .content h2 { margin-bottom: 40px; }
+/* line 30, ../sass/_partials/_doctors.sass */
+#doctors .content p { margin-left: 25px; margin-bottom: 40px; }
+/* line 35, ../sass/_partials/_doctors.sass */
+#doctors .references { font-size: 0.9em; padding: 30px 20px; }
+/* line 40, ../sass/_partials/_doctors.sass */
+#doctors .references p { margin-bottom: 10px; }
+/* line 44, ../sass/_partials/_doctors.sass */
+#doctors .references p strong { color: #005d9a; }
+
 /*# sourceMappingURL=site.css.map */

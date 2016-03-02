@@ -1,0 +1,70 @@
+.submenu
+  margin:
+    top: 20px
+  padding: 20px 30px
+  border:
+    right: 1px solid $color-dark
+
+  ul
+    li
+      padding: 7px 0
+
+      &.active
+        a
+          font:
+            family: $font-effra-medium
+
+      a
+        color: $color-secondary
+        font:
+          family: $font-effra-light
+
+        &:hover
+          color: $color-secondary-dark
+          font:
+            family: $font-effra-medium
+
+        i
+          display: none
+
+  @media #{$xsmall-max}
+    border: none
+    padding: 10px 50px
+
+    ul
+      @include border-radius()
+      border: 1px solid $color-dark
+      -webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,0.25)
+      -moz-box-shadow: 0 0 5px 1px rgba(0,0,0,0.25)
+      box-shadow: 0 0 5px 1px rgba(0,0,0,0.25)
+
+      li
+        padding: 10px 10px 10px 35px
+        display: none
+
+        &.active
+          display: block
+          padding: 10px
+          font:
+            family: $font-effra-light
+
+          a
+            color: $color-dark
+
+        a
+          i
+            width: 16px
+            display: inline-block
+            color: $color-secondary
+            margin:
+              right: 5px
+
+      &.active
+        li
+          &.active
+            a
+              i
+                color: $color-dark
+
+                &::before
+                  content: "\f00c"

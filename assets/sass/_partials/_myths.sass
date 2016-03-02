@@ -1,0 +1,62 @@
+#myths
+  .questions
+    h3
+      font:
+        size: 2em
+        family: $font-effra-bold
+      text-transform: uppercase
+      color: $color-primary
+
+    .question
+      margin:
+        bottom: 20px
+
+      h4
+        cursor: pointer
+        padding: 40px 320px 40px 20px
+        color: $color-secondary
+        -webkit-box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.25)
+        -moz-box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.25)
+        box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.25)
+        background:
+          color: $color-third
+          image: url('../images/bt-right-wrong.png')
+          repeat: no-repeat
+          size: 200px 90px
+          position: right 10px center
+
+      .answer
+        display: none
+        margin: 0 20px 20px 20px
+        padding: 40px
+        background:
+          color: $color-soft
+        -webkit-box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.25)
+        -moz-box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.25)
+        box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.25)
+
+        &.right,
+        &.wrong
+          .response
+            text-transform: uppercase
+            position: absolute
+
+          p
+            padding: 0
+            margin: 0
+
+        &.right
+          .response
+            color: green
+
+          p
+            padding:
+              left: 110px
+
+        &.wrong
+          .response
+            color: red
+
+          p
+            padding:
+              left: 63px

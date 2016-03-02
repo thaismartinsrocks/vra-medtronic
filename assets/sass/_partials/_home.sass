@@ -17,7 +17,7 @@
         width: 100%
         min-height: 100%
 
-    .content
+    .text
       background:
         color: $color-secondary
       height: 100%
@@ -181,22 +181,40 @@
       text-align: center
 
       img
-        width: 70%
-        margin: 25px auto
+        width: 90%
+        margin: 50px auto
 
-    .content
+        @media #{$large}
+          width: 70%
+          margin: 25px auto
+
+    .text
       padding: 50px 100px
 
-      h1
+      @media #{$xsmall-max}
+        padding:
+          top: 0
+          left: 0
+          right: 0
+        width: 70%
+        margin:
+          right: 20%
+          left: 10%
+
+      h1,
+      p
         width: 400px
+
+        @media #{$xsmall-max}
+          width: 90%
+
+      h1
         color: $color-secondary
         margin:
           bottom: 25px
-
       p
         margin:
           bottom: 10px
-        width: 400px
 
       .btn
         padding: 0 15px 0 20px

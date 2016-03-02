@@ -10,7 +10,7 @@
 
     <div class="logo">
         <a href="<?php echo BASE_URL; ?>">
-            <img src="<?php BASE_URL; ?>assets/images/logo.png" alt="Medtronic" title="Medtronic">
+            <img src="<?php echo BASE_URL; ?>assets/images/logo.png" alt="Medtronic" title="Medtronic">
         </a>
     </div>
 

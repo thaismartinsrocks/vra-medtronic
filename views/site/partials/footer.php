@@ -3,7 +3,7 @@
         <p>RFG2&trade; - reg ANVISA: 10349000391, ClosureFast&trade; - reg ANVISA: 10349000418 e ClosureRFS&trade; - reg ANVISA: 10349000417</p>
     </div>
     <div class="bg-primary col-xs-4 col-xxs-12">
-        <img src="<?php BASE_URL; ?>assets/images/logo-white.png" alt="Medtronic" title="Medtronic">
+        <img src="<?php echo BASE_URL; ?>assets/images/logo-white.png" alt="Medtronic" title="Medtronic">
     </div>
     <div class="col-xs-12">
         <div class="col-xs-6 col-xxs-12">

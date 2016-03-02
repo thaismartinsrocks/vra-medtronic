@@ -2,9 +2,9 @@
 
     <div class="principal">
         <div class="image col-xs-7 col-xxs-12 nospacing">
-            <img src="<?php BASE_URL; ?>assets/images/home/home-1.jpg" alt="Medtronic" title="Medtronic">
+            <img src="<?php echo BASE_URL; ?>assets/images/home/home-1.jpg" alt="Medtronic" title="Medtronic">
         </div>
-        <div class="content col-xs-5  col-xxs-12">
+        <div class="text col-xs-5  col-xxs-12">
             <h1>Encontre alívio para suas varizes.</h1>
             <p class="large">Saiba mais sobre varizes, insuficiência venosa crônica e como a doença afeta a sua vida e a vida daqueles que você ama.</p>
             <a class="btn btn-soft-transparent">Saiba Mais</a>
@@ -13,16 +13,16 @@
 
     <div class="others-images">
         <div class="image col-xs-3 nospacing">
-            <img src="<?php BASE_URL; ?>assets/images/home/home-2.jpg" alt="Medtronic" title="Medtronic">
+            <img src="<?php echo BASE_URL; ?>assets/images/home/home-2.jpg" alt="Medtronic" title="Medtronic">
         </div>
         <div class="image col-xs-3 nospacing">
-            <img src="<?php BASE_URL; ?>assets/images/home/home-3.jpg" alt="Medtronic" title="Medtronic">
+            <img src="<?php echo BASE_URL; ?>assets/images/home/home-3.jpg" alt="Medtronic" title="Medtronic">
         </div>
         <div class="image col-xs-3 nospacing">
-            <img src="<?php BASE_URL; ?>assets/images/home/home-4.jpg" alt="Medtronic" title="Medtronic">
+            <img src="<?php echo BASE_URL; ?>assets/images/home/home-4.jpg" alt="Medtronic" title="Medtronic">
         </div>
         <div class="image col-xs-3 nospacing">
-            <img src="<?php BASE_URL; ?>assets/images/home/home-5.jpg" alt="Medtronic" title="Medtronic">
+            <img src="<?php echo BASE_URL; ?>assets/images/home/home-5.jpg" alt="Medtronic" title="Medtronic">
         </div>
     </div>
 
@@ -61,9 +61,9 @@
 
     <div class="closurefast">
         <div class="image col-xs-6 col-xxs-12">
-            <img src="<?php BASE_URL; ?>assets/images/home/closurefast.png" alt="Closurefast&trade;" title="Closurefast&trade;">
+            <img src="<?php echo BASE_URL; ?>assets/images/home/closurefast.png" alt="Closurefast&trade;" title="Closurefast&trade;">
         </div>
-        <div class="content col-xs-6 col-xxs-12">
+        <div class="text col-xs-6 col-xxs-12">
             <h1>Procedimento Closurefast&trade;</h1>
             <p class="large">O procedimento Closurefast&trade; foi rigorasamente testado e comprovado em vários estudos e pacientes e tratou mais de 900.000 paciente em 100 países.</p>
             <a href="#" class="btn btn-secondary-transparent"><i class="fa fa-angle-right"></i> </a>

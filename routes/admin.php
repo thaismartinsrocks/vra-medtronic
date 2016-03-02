@@ -18,9 +18,7 @@ Flight::route('/admin/login', function(){
         Flight::redirect( ADMIN_PATH . '/');
 
     Flight::render(ADMIN_PATH . 'modules/login', null, 'content');
-    Flight::render(ADMIN_PATH . 'partials/head', array('title' => View::$adminTitle), 'head');
-    Flight::render(ADMIN_PATH . 'partials/footer', null, 'footer');
-    Flight::render(ADMIN_PATH . 'layout', null);
+    View::generateLoginContent();
 });
 
 Flight::route('POST /admin/oauth', function(){

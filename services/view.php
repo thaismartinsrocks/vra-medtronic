@@ -11,6 +11,13 @@ class View
         'cidades' => array('name' => 'Cidades', 'model' => 'City'),
     );
 
+    public static function generateLoginContent()
+    {
+        Flight::render(ADMIN_PATH . 'partials/head', array('title' => self::$adminTitle), 'head');
+        Flight::render(ADMIN_PATH . 'partials/bottom', null, 'bottom');
+        Flight::render(ADMIN_PATH . 'layout', null);
+    }
+
     public static function generateAdminContent()
     {
         Flight::render(ADMIN_PATH . 'partials/head', array('title' => self::$adminTitle), 'head');

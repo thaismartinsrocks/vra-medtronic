@@ -9,18 +9,40 @@ h1
   font:
     family: $font-effra-bold
     size: 2em
-  text-transform: uppercase
   line-height: 1.3em
+  color: $color-primary
+
+  @media #{$small-max}
+    font:
+      size: 1.8em
+    line-height: 1.2em
+
+  @media #{$xsmall-max}
+    font:
+      size: 1.6em
+    line-height: 1.2em
+
+h2
+  font:
+    family: $font-effra-bold
+    size: 1.8em
+  line-height: 1.3em
+  color: $color-secondary
 
 p
   font:
     family: $font-effra-light
+  line-height: 1.2em
 
   &.large
     font:
       size: 1.5em
-    line-height: 1.2em
 
-    @media #{$xsmall-max}
+
+    @media #{$small-max}
       font:
-        size: 1.3em
+        size: 1.2em
+
+    @media #{$large}
+      font:
+        size: 1.4em

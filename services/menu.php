@@ -24,7 +24,7 @@ class Menu
             foreach (Menu::getAll() as $name => $module)
             {
                 $classes = (str_word_count($name) > 2) ? 'double-line' : '';
-                $classes .= (Menu::getCurrentMenu() == '/' . $module) ? ' active' : '';
+                $classes .= (Menu::getCurrentMenu() == $module) ? ' active' : '';
 
                 $menu .= '<li class="' . $classes . '"><a href="' . BASE_URL . $module . '">' . $name . '</a></li>';
             }
@@ -36,6 +36,6 @@ class Menu
     public static function getCurrentMenu()
     {
         $route = Flight::router()->current();
-        return $route->pattern;
+        return $route->params['module'];
     }
 }

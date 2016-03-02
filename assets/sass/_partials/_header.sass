@@ -32,24 +32,40 @@ header
         margin: 30px 20px 0 20px
         text-align: center
         vertical-align: middle
+        position: relative
+
+        @media #{$large-max}
+          margin:
+            right: 5px
+            left: 5px
+
+        @media #{$medium-max}
+          width: 80px
+          font-size: .8em
+
+        @media #{$small-max}
+          width: 60px
+          font-size: .7em
+
+        &.double-line
+          &.active,
+          &:hover
+            &::after
+              bottom: -15px
 
         &.active,
         &:hover
-          margin:
-            top: 45px
-
           &::after
             @include animation(fade-after-menu .3s ease forwards)
             content: " "
-            display: block
             height: 5px
-            margin: 10px auto 0 auto
+            margin: 0 auto
+            position: absolute
+            left: 0
+            right: 0
+            bottom: -22px
             background:
               color: $color-primary-soft
-
-          &.double-line
-            margin:
-              top: 28px
 
           a
             color: $color-secondary

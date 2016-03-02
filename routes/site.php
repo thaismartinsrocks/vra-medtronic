@@ -1,11 +1,16 @@
 <?php
 
-Flight::route('/(@module:[A-Za-z]+)', function($module){
+Flight::route('/(@module:[A-Za-z]+(/@submodule:[A-Za-z]+))', function($module, $submodule){
 
     if(!$module)
         $module = 'home';
 
-    Flight::render(SITE_PATH . 'modules/' . $module, null, 'content');
+    $args['module'] = $module;
+
+    if($submodule)
+        $module .= '/' . $submodule;
+
+    Flight::render(SITE_PATH . 'modules/' . $module, $args, 'content');
     View::generateSiteContent();
 });
 

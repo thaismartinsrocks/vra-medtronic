@@ -8,7 +8,7 @@ class Menu
                 'Home' => '',
                 'Por que Medtronic' => 'medtronic',
                 'Encontre um Médico' => 'medicos',
-                'Doença Venosa' => 'doenca-venosa',
+                'Doença Venosa' => 'doenca',
                 'Tratamento' => 'tratamento',
                 'Histórias' => 'historias',
                 'Contato' => 'contato'

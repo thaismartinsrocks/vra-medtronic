@@ -31,16 +31,19 @@ table { border-collapse: collapse; border-spacing: 0; }
 a:hover { text-decoration: none; }
 
 /* line 48, ../sass/_elements/_normalize.sass */
+input { outline: none; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; }
+
+/* line 54, ../sass/_elements/_normalize.sass */
 .container-fluid { padding: 0; margin: 0; }
 
-/* line 52, ../sass/_elements/_normalize.sass */
+/* line 58, ../sass/_elements/_normalize.sass */
 .nospacing { padding: 0 !important; margin: 0 !important; }
 
 @font-face { font-family: "effrabold"; src: url("../font/dalton_maag_-_effra_bold-webfont.eot"); src: url("../font/dalton_maag_-_effra_bold-webfont.eot?#iefix") format("embedded-opentype"), url("../font/dalton_maag_-_effra_bold-webfont.woff2") format("woff2"), url("../font/dalton_maag_-_effra_bold-webfont.woff") format("woff"), url("../font/dalton_maag_-_effra_bold-webfont.ttf") format("truetype"), url("../font/dalton_maag_-_effra_bold-webfont.svg#effrabold") format("svg"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "effralight"; src: url("../font/dalton_maag_-_effra_light-webfont.eot"); src: url("../font/dalton_maag_-_effra_light-webfont.eot?#iefix") format("embedded-opentype"), url("../font/dalton_maag_-_effra_light-webfont.woff2") format("woff2"), url("../font/dalton_maag_-_effra_light-webfont.woff") format("woff"), url("../font/dalton_maag_-_effra_light-webfont.ttf") format("truetype"), url("../font/dalton_maag_-_effra_light-webfont.svg#effralight") format("svg"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "efframedium"; src: url("../font/dalton_maag_-_effra_medium-webfont.eot"); src: url("../font/dalton_maag_-_effra_medium-webfont.eot?#iefix") format("embedded-opentype"), url("../font/dalton_maag_-_effra_medium-webfont.woff2") format("woff2"), url("../font/dalton_maag_-_effra_medium-webfont.woff") format("woff"), url("../font/dalton_maag_-_effra_medium-webfont.ttf") format("truetype"), url("../font/dalton_maag_-_effra_medium-webfont.svg#efframedium") format("svg"); font-weight: normal; font-style: normal; }
 /* line 1, ../sass/_elements/_text.sass */
-*, body { font-family: "efframedium", Helvetica, Arial, Sans-serif; font-size: 1em; color: #939395; }
+*, body { font-family: "efframedium", Helvetica, Arial, Sans-serif; font-size: 1em; color: #a8a7ac; }
 
 /* line 8, ../sass/_elements/_text.sass */
 h1 { font-family: "effrabold"; font-size: 2em; line-height: 1.3em; color: #005d9a; }
@@ -250,7 +253,7 @@ footer .menu { padding-top: 20px; padding-left: 90px; }
 /* line 32, ../sass/_partials/_footer.sass */
 footer .menu ul li { margin-bottom: 10px; }
 /* line 36, ../sass/_partials/_footer.sass */
-footer .menu ul a { color: #939395; font-family: "effralight"; font-size: 0.8em; }
+footer .menu ul a { color: #a8a7ac; font-family: "effralight"; font-size: 0.8em; }
 /* line 42, ../sass/_partials/_footer.sass */
 footer .menu ul a:hover { font-family: "efframedium"; }
 /* line 46, ../sass/_partials/_footer.sass */
@@ -380,25 +383,33 @@ footer .newsletter form button i { font-size: 2em; font-weight: 900; }
 /* line 44, ../sass/_partials/_medtronic.sass */
 #medtronic .references p strong { color: #005d9a; }
 
-/* line 2, ../sass/_partials/_doctors.sass */
+/* line 1, ../sass/_partials/_doctors.sass */
+#doctors { margin-bottom: 50px; }
+/* line 5, ../sass/_partials/_doctors.sass */
 #doctors strong { font-family: "efframedium"; color: #0092d2; }
-/* line 7, ../sass/_partials/_doctors.sass */
+/* line 10, ../sass/_partials/_doctors.sass */
 #doctors .principal { height: 320px; width: 100%; overflow: hidden; background-color: #005d9a; }
-/* line 14, ../sass/_partials/_doctors.sass */
-#doctors .principal .image { padding: 0; }
 /* line 17, ../sass/_partials/_doctors.sass */
+#doctors .principal .image { padding: 0; }
+/* line 20, ../sass/_partials/_doctors.sass */
 #doctors .principal .image img { width: 100%; min-height: 100%; }
-/* line 22, ../sass/_partials/_doctors.sass */
+/* line 25, ../sass/_partials/_doctors.sass */
 #doctors .content h1 { text-align: center; margin: 40px 0; }
-/* line 26, ../sass/_partials/_doctors.sass */
+/* line 29, ../sass/_partials/_doctors.sass */
 #doctors .content h2 { margin-bottom: 40px; }
-/* line 30, ../sass/_partials/_doctors.sass */
-#doctors .content p { margin-left: 25px; margin-bottom: 40px; }
-/* line 35, ../sass/_partials/_doctors.sass */
-#doctors .references { font-size: 0.9em; padding: 30px 20px; }
+/* line 33, ../sass/_partials/_doctors.sass */
+#doctors .content p { margin-bottom: 40px; }
+/* line 37, ../sass/_partials/_doctors.sass */
+#doctors .content .inputs { padding: 0 40px; }
 /* line 40, ../sass/_partials/_doctors.sass */
-#doctors .references p { margin-bottom: 10px; }
+#doctors .content .inputs .form-group { margin-bottom: 30px; }
 /* line 44, ../sass/_partials/_doctors.sass */
-#doctors .references p strong { color: #005d9a; }
+#doctors .content .inputs .form-group input, #doctors .content .inputs .form-group select { -webkit-border-radius: 0.5em; -moz-border-radius: 0.5em; border-radius: 0.5em; width: 100%; padding: 6px 15px; border-color: #a8a7ac; color: #a8a7ac; font-family: "effralight"; }
+/* line 55, ../sass/_partials/_doctors.sass */
+#doctors .content .inputs .form-group label { color: #0092d2; margin-left: 15px; margin-bottom: 5px; }
+/* line 61, ../sass/_partials/_doctors.sass */
+#doctors .content .buttons { padding-top: 27px; }
+/* line 65, ../sass/_partials/_doctors.sass */
+#doctors .content .buttons input { -webkit-border-radius: 0.5em; -moz-border-radius: 0.5em; border-radius: 0.5em; font-family: "efframedium"; padding: 5px; max-width: 85px; margin: 0; }
 
 /*# sourceMappingURL=site.css.map */
